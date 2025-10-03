@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Moug
 
-## Getting Started
+Moug is a modern and responsive landing page for a mobile application, built with Next.js and Tailwind CSS. It features a clean and professional design, with a focus on showcasing the app's features and driving downloads.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technology Stack](#technology-stack)
+- [Contribution Guidelines](#contribution-guidelines)
+- [License](#license)
+- [Contact](#contact)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Responsive Design:** Fully responsive layout that looks great on all devices.
+- **Customizable Components:** Easily customize the hero section, feature lists, and footer.
+- **App Showcase:** Dedicated section to showcase the mobile app with screenshots and app store links.
+- **Feature Highlights:**
+  - Real-time order tracking
+  - Multiple payment options
+  - Customer reviews and ratings
+  - Special discounts and offers
+  - 24/7 customer support
+- **Smooth Animations:** Subtle animations using Framer Motion to enhance the user experience.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Installation
 
-## Learn More
+To get a local copy up and running, follow these simple steps.
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Node.js (v20 or later)
+- npm
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Installation Steps
 
-## Deploy on Vercel
+1. Clone the repo
+   ```sh
+   git clone https://github.com/your_username/moug.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Run the development server
+   ```sh
+   npm run dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Usage
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is a landing page for a mobile application. You can customize the content by editing the following files:
+
+- `src/app/page.tsx`: The main page of the application.
+- `src/components/hero/hero.tsx`: The hero section component.
+- `src/components/gitapp/GitApp.tsx`: The app showcase component.
+- `src/components/footer-05/footer.tsx`: The footer component.
+
+You can also customize the theme and styles by editing the following files:
+
+- `tailwind.config.mjs`: The Tailwind CSS configuration file.
+- `src/app/globals.css`: The global CSS file.
+
+## Technology Stack
+
+- [Next.js](https://nextjs.org/) - React framework for building server-side rendered and static web applications.
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+- [TypeScript](https://www.typescriptlang.org/) - A typed superset of JavaScript that compiles to plain JavaScript.
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapid UI development.
+- [Framer Motion](https://www.framer.com/motion/) - A production-ready motion library for React.
+- [Radix UI](https://www.radix-ui.com/) - A set of low-level UI components for building high-quality design systems.
+- [Lucide React](https://lucide.dev/) - A simply beautiful and consistent icon set.
+
+## Contribution Guidelines
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more information.
+
+## Contact
+
+Mohamed Elsheshtawey - [LinkedIn](https://www.linkedin.com/in/mohamed-elsheshtawey/)
+
+Project Link: [https://github.com/your_username/moug](https://github.com/your_username/moug)

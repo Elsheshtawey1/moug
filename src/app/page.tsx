@@ -1,103 +1,60 @@
-import Image from "next/image";
+import Navbar from "@/components/navbar/navbar-01";
+import Hero from "@/components/hero/hero";
+import GitApp from "@/components/gitapp/GitApp";
+import Footer from "@/components/footer-05/footer";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <>
+      <main>
+        <Navbar />
+        <Hero
+          title="Complete Folution for Managing"
+          description=" Your lagndry and serving your customers with ease"
+          image="/image/planetcare-23coWmkTNSg-unsplash.jpg"
+          thumbnail="/image/planetcare-24coWmkTNSg-unsplash.jpg"
+          ShowItem={true}
+          style={{ minHeight: "100vh" }}
+          id="Home"
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+        <Hero
+          title="Who We Are"
+          description=" We are a digital platform specialized in connecting customers with the
+best laundries and agencies in Saudi Arabia. We strive to provide high-
+quality and easy-to-use service."
+          backgroundColor="#2563EB"
+          thumbnail="/image/Component 7 .png"
+          ShowItem={false}
+          className="shadow-none min-h-90 "
+          AddItem={true}
+          id="About Us"
+        />
+        <GitApp
+          id="Get the App"
+          title="|Get the App"
+          SupTitle="Whether you are a laundry owner or employee"
+          description="Control your laundry with ease - from receiving orders to tracking
+inventory and purchasing supplies"
+          features={[
+            "Track laundry material consumption",
+            "Purchase necessary products for the laundry from the app",
+            "Receive orders from customers directly",
+            "Request regular payment or installment purchase",
+            "Comprehensive credit and debit system",
+          ]}
+        />
+        <GitApp
+          id="Get the App"
+          title="Whether you are a customer looking for a nearby laundry"
+          description="Our app makes everything easier for you"
+          SupTitle={false}
+          className="text-3xl md:text-4xl lg:text-[2.7rem] xl:text-[3.5rem]font-bold leading-tight tracking-tight text-[#349FF4]"
+          features={["Track your order moment by moment", "Reviews, prices, and distance from you - everything is clear in front of you", "Multiple and secure payment methods"]}
+        />
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      <footer>
+        <Footer />
       </footer>
-    </div>
+    </>
   );
 }
