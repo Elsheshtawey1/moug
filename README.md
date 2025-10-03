@@ -92,4 +92,4 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 
 Mohamed Elsheshtawey - [LinkedIn](https://www.linkedin.com/in/mohamed-elsheshtawey/)
 
-Project Link: [https://github.com/your_username/moug](https://github.com/your_username/moug)
+Project Link: [https://github.com/Elsheshtawey1/moug](https://github.com/Elsheshtawey1/moug)
