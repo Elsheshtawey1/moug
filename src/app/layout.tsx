@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Moga wash",
   description: "We are a digital platform specialized in connecting customers with the best laundries and agencies in Saudi Arabia. We strive to provide high-quality and easy-to-use service",
   icons: {
-    icon: "/image/موج.svg",
+    icon: "/image/mog.svg",
     
     shortcut: "/image/Component 7 .png",
     apple: "/image/Component 7 .png",

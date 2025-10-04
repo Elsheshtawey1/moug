@@ -13,7 +13,6 @@ interface Props {
 }
 
 const GitApp = ({ title, SupTitle, description, id, className, features }: Props) => {
-  // Variants for stagger animation (features list)
   const container = {
     hidden: { opacity: 0 },
     show: { opacity: 1, transition: { staggerChildren: 0.2 } },
@@ -68,7 +67,13 @@ const GitApp = ({ title, SupTitle, description, id, className, features }: Props
             <motion.div className="flex flex-col mt-8 gap-4" variants={container} initial="hidden" whileInView="show" viewport={{ once: true }}>
               {features.map((text, index) => (
                 <motion.div key={index} variants={item} className="flex items-center gap-3">
-                  <Image src="/image/check.svg" alt="check" width={35} height={35} />
+                  <Image
+                    src="/image/check.svg"
+                    alt="check"
+                    width={35}
+                    height={35}
+                    style={{ width: "auto", height: "auto" }} // يحافظ على نسبة الصورة
+                  />
                   <p className="text-gray-800 text-lg">{text}</p>
                 </motion.div>
               ))}
@@ -84,17 +89,17 @@ const GitApp = ({ title, SupTitle, description, id, className, features }: Props
             viewport={{ once: true }}
           >
             <motion.div whileHover={{ scale: 1.05 }} className="transition-transform duration-200">
-              <Image src="/image/Download on Google Play.png" alt="Download on Google Play" width={200} height={60} />
+              <Image src="/image/Download on Google Play.png" alt="Download on Google Play" width={150} height={60} style={{ width: "auto", height: "auto" }} />
             </motion.div>
             <motion.div whileHover={{ scale: 1.05 }} className="transition-transform duration-200">
-              <Image src="/image/Link.png" alt="App Store" width={200} height={100} />
+              <Image src="/image/Link.png" alt="App Store" width={150} height={100} style={{ width: "auto", height: "auto" }} />
             </motion.div>
           </motion.div>
         </div>
 
         {/* Right Section (Thumbnail) */}
         <motion.div className="flex items-center justify-center" initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-          <Image src="/image/Component 8.png" alt="thumbnail" width={600} height={600} />
+          <Image src="/image/Component 8.png" alt="thumbnail" width={600} height={600} style={{ width: "auto", height: "auto" }} priority />
         </motion.div>
       </div>
     </div>

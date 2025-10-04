@@ -11,17 +11,16 @@ import Link from "next/link";
 const footerLinks = [
   {
     title: "About Us",
-    href: "#",
+    href: "#About Us",
   },
   {
     title: "Get the App",
-    href: "#",
+    href: "#Get the App",
   },
   {
     title: "Contact Us",
-    href: "#",
+    href: "#Contact Us",
   },
-  
 ];
 
 const Footer = () => {
@@ -32,7 +31,7 @@ const Footer = () => {
         <div className="max-w-(--breakpoint-xl) mx-auto">
           <div className="py-12 flex flex-col justify-start items-center">
             {/* Logo */}
-            <Image src={"/image/موج.svg"} alt="My Logo" width={80} height={80} priority />
+            <Image src={"/image/mog.svg"} alt="My Logo" width={80} height={80} priority />
 
             <ul className="mt-6 flex items-center gap-4 flex-wrap">
               {footerLinks.map(({ title, href }) => (

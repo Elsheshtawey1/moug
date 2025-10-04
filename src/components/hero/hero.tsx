@@ -1,4 +1,5 @@
 "use client";
+
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, CirclePlay } from "lucide-react";
 import React from "react";
@@ -26,10 +27,7 @@ const Hero = ({ title, description, image, thumbnail, className, style, backgrou
   // Variants for stagger animation
   const container = {
     hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2 },
-    },
+    show: { opacity: 1, transition: { staggerChildren: 0.2 } },
   };
 
   const item = {
@@ -39,7 +37,9 @@ const Hero = ({ title, description, image, thumbnail, className, style, backgrou
 
   return (
     <div className="relative flex items-center justify-center" style={style} id={id}>
+      {/* Background */}
       {image ? <Image src={image} alt="Background" fill priority className="object-cover object-center -z-10" /> : <div className="absolute inset-0 -z-10" style={{ backgroundColor }} />}
+
       {ShowItem && <div className="absolute inset-0 bg-black/50"></div>}
 
       <div className="max-w-(--breakpoint-xl) w-full mx-auto grid lg:grid-cols-2 gap-12 px-6 py-12">
@@ -88,7 +88,7 @@ const Hero = ({ title, description, image, thumbnail, className, style, backgrou
             <motion.div className="flex flex-col mt-7 items-start" variants={container} initial="hidden" whileInView="show" viewport={{ once: true }}>
               {List.map((text, index) => (
                 <motion.div key={index} variants={item} className="flex items-center gap-2">
-                  <Image src="/image/check.svg" alt="check" width={35} height={35} />
+                  <Image src="/image/check.svg" alt="check" width={35} height={35} style={{ width: "auto", height: "auto" }} />
                   <p className="text-white text-base">{text}</p>
                 </motion.div>
               ))}
@@ -99,7 +99,7 @@ const Hero = ({ title, description, image, thumbnail, className, style, backgrou
         {/* Right Side (Thumbnail) */}
         {thumbnail && (
           <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="relative z-10">
-            <Image src={thumbnail} alt="thumbnail" width={600} height={600} className={`rounded-xl shadow-blue-100 aspect-video shadow-2xl ${className}`} />
+            <Image src={thumbnail} alt="thumbnail" width={600} height={600} priority style={{ width: "100%", height: "auto" }} className={`rounded-xl shadow-blue-100 shadow-2xl ${className}`} />
           </motion.div>
         )}
       </div>
